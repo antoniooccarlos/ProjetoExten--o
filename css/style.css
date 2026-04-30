@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-container {
+    flex: 1;
+    padding: 1px;
+}
+.footer-copyright {
+    background-color: #1a2e22;
+    color: #e0d7c6;           
+    padding: 5px 0;
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+    border-top: 3px solid #3d5a45;
+    
+}
+
+.footer-conteudo {
+   background-color: #1a2e22;
+    color: #e0d7c6;
+    padding: 20px;
+    text-align: center;
+}
