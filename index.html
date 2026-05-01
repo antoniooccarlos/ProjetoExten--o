@@ -11,7 +11,7 @@
     <!-- inicio da pagina -->
     <header class="header-container">
         
-        <div class="texto-topo1">Histótia de</div>
+        <div class="texto-topo1">História de</div>
         <div class="texto-topo2">Presidente Figueiredo</div>
         <img class="Brasão-cidade" src="#" alt="Brasão">
         <nav class="barra-navegacao">
@@ -29,65 +29,83 @@
     <main class="main-container">
 
         <!-- titulo-->
-        <div class="intro-pagina-container">
-            <h1 class="titulo-principal">PRESIDENTE FIGUEIREDO:<br>
-                A Construção de uma Identidade na Amazônia</h1>
-            <p class="paragrafo-principal">Uma jornada pela história, desenvolvimento e desafios da 'Terra das Cachoeiras',<br>
-                da floresta virgem á consolidação do município</p>
-            <button class="tour-botao">COMEÇAR O TOUR HISTÓRICO</button>
-        </div>
+        <section class="secao-inicial">
+            <div class="overlay">
+                <div class="conteudo-secao">
+                    <h1>PRESIDENTE FIGUEIREDO:</h1>
+                    <p class="subtitulo">A Construção de uma Identidade na Amazônia</p>
+                    <p class="descricao">Uma jornada pela história, desenvolvimento e desafios da 'Terra das Cachoeiras',<br>
+                        da floresta virgem à consolidação do município</p>
+                    <button class="botao-tour">COMEÇAR O TOUR HISTÓRICO</button>
+                </div>
+            </div>
+        </section>
         
         <!--intro e linha do tempo-->
-        <div class="meio-pagina-container">
-            <div class="intro-container">
-                <h1 class="intro-titulo">Introdução à Região</h1>
-                <p class="intro-texto">texto aq.....................................................</p>
-            </div>
-        </div>
-        
-        <div class="timeline-container">
-            <h2 class="timeline-title">Linha do Tempo Visual (Até 2008)</h2>
-        
-            <div class="timeline">
-                <div class="timeline-line"></div>
-        
-                <div class="timeline-item">
-                    <div class="timeline-icon">🛣️</div>
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">[1960s]</span>
-                        <span class="timeline-text">Abertura da BR-174</span>
+        <section class="introducao-container">
+
+            <!-- Coluna 1: Mapa -->
+            <img src="/img/Presidente_FigueiredoMapa.svg" alt="mapa da cidade" class="mapa-img">
+
+            <!-- Coluna 2: Texto -->
+            <article class="bloco-texto">
+                <h2>Introdução à Região</h2>
+                <p>
+                    Presidente Figueiredo é um município brasileiro localizado na Região Metropolitana de Manaus, no estado do
+                    Amazonas. É conhecida nacionalmente como a Terra das Cachoeiras em razão de sua fartura de águas, selva,
+                    recursos naturais, cavernas, cachoeiras e geossítios que constituem o Geoparque Cachoeiras do Amazonas. Dentro
+                    da jurisdição do município está a Usina Hidrelétrica de Balbina, que foi severamente criticada durante sua
+                    construção por seu enorme impacto sobre as populações nativas e tradicionais; a hidrelétrica é a única no estado
+                    do Amazonas.
+                </p>
+            </article>
+
+            <!-- Coluna 3: Linha do Tempo -->
+            <aside class="timeline-container">
+                <h3 class="timeline-title">Linha do Tempo Visual (Até 2008)</h3>
+            
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🛣️</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">[1960s]</span>
+                            <span class="timeline-text">Abertura da BR-174</span>
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🏭</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">[1970s]</span>
+                            <span class="timeline-text">UHE Balbina</span>
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🗺️</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">[1981]</span>
+                            <span class="timeline-text">Emancipação do<br>Município</span>
+                        </div>
+                    </div>
+            
+                    <div class="timeline-item">
+                        <div class="timeline-icon">🤝</div>
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">[2008]</span>
+                            <span class="timeline-text">Turismo e<br>Consolidação</span>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="timeline-item">
-                    <div class="timeline-icon">🏭</div>
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">[1970s]</span>
-                        <span class="timeline-text">UHE Balbina</span>
-                    </div>
-                </div>
-        
-                <div class="timeline-item">
-                    <div class="timeline-icon">🗺️</div>
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">[1981]</span>
-                        <span class="timeline-text">Emancipação do<br>Município</span>
-                    </div>
-                </div>
-        
-                <div class="timeline-item">
-                    <div class="timeline-icon">🤝</div>
-                    <div class="timeline-node"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">[2008]</span>
-                        <span class="timeline-text">Turismo e<br>Consolidação</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </aside>
+
+        </section>
     </main>
 
     <footer class="footer-copyright">

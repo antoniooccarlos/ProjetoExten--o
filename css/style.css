@@ -5,17 +5,27 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+:root {
+    --bg-color: #FAF8F2;
+    --text-dark: #1A1A1A;
+    --line-color: #384C3E;
+    --icon-bg: #E3D1BA;
+    --node-inner: #A4694D;
+}
+
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--bg-color);
 }
 
-/* header */
+/* ── HEADER ── */
 .header-container {
     text-align: center;
 }
+
 .barra-navegacao {
     background-color: #1a2e22;
     padding: 0;
@@ -23,7 +33,6 @@ body {
 }
 
 .links-paginas {
-    
     list-style: none;
     margin: 0;
     padding: 0;
@@ -37,7 +46,6 @@ body {
     padding: 15px 25px;
     color: #e0d7c6;
     text-decoration: none;
-    font-family: 'Segoe UI', Arial, sans-serif;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
@@ -54,24 +62,316 @@ body {
     color: #ffffff !important;
 }
 
-
+/* ── MAIN ── */
 .main-container {
     flex: 1;
-    padding: 1px;
 }
+
+/* ── HERO ── */
+.secao-inicial {
+    background-image: url('/img/imagem-cidade.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
+    position: relative;
+    color: #ffffff;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-secao {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.conteudo-secao h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitulo {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.botao-tour {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #e0d7c6;
+    color: #1a2e22;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.botao-tour:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* ── SEÇÃO INTRO + LINHA DO TEMPO ── */
+.introducao-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    background-color: var(--bg-color);
+    padding: 40px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Coluna 1 – Mapa */
+.mapa-img {
+    width: 29%;
+    flex-shrink: 0;
+    object-fit: contain;
+    align-self: center;
+}
+
+/* Coluna 2 – Texto */
+.bloco-texto {
+    flex: 1;
+    min-width: 0;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px solid #d4c9b0;
+    border-right: 2px solid #d4c9b0;
+}
+
+.bloco-texto h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: var(--line-color);
+    margin-bottom: 14px;
+}
+
+.bloco-texto p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #3a3a3a;
+}
+
+/* Coluna 3 – Timeline */
+.timeline-container {
+    flex-shrink: 0;
+    width: 420px;
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+.timeline-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 28px;
+    color: var(--line-color);
+}
+
+/* Linha do tempo – horizontal */
+.timeline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+}
+
+/* Linha conectora horizontal */
+.timeline-line {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    width: auto;
+    height: 3px;
+    background-color: var(--line-color);
+    z-index: 1;
+}
+
+/* Cada item */
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 80px;
+    text-align: center;
+}
+
+/* Ícone circular */
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--icon-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+}
+
+/* Nó na linha */
+.timeline-node {
+    width: 14px;
+    height: 14px;
+    background-color: var(--node-inner);
+    border: 4px solid var(--bg-color);
+    box-shadow: 0 0 0 3px var(--line-color);
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+/* Texto abaixo do nó */
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-date {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: var(--line-color);
+}
+
+.timeline-text {
+    font-size: 12px;
+    line-height: 1.3;
+    color: #555;
+}
+
+/* ── FOOTER ── */
 .footer-copyright {
     background-color: #1a2e22;
-    color: #e0d7c6;           
+    color: #e0d7c6;
     padding: 5px 0;
     font-family: 'Georgia', serif;
     font-size: 14px;
     border-top: 3px solid #3d5a45;
-    
 }
 
 .footer-conteudo {
-   background-color: #1a2e22;
-    color: #e0d7c6;
     padding: 20px;
     text-align: center;
+}
+
+.footer-conteudo a {
+    color: #c9b99a;
+    text-decoration: underline;
+}
+
+/* ── RESPONSIVIDADE ── */
+@media (max-width: 1024px) {
+    .timeline-container {
+        width: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    .introducao-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .mapa-img {
+        width: 180px;
+    }
+
+    .bloco-texto {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #d4c9b0;
+        border-bottom: 2px solid #d4c9b0;
+        padding: 20px 0;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .timeline-title {
+        text-align: center;
+    }
+
+    .timeline-line {
+        top: 40px;
+        left: 40px;
+        right: 40px;
+    }
+
+    .conteudo-secao h1 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .links-paginas {
+        flex-wrap: wrap;
+    }
+
+    .links-paginas li a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .timeline-item {
+        width: 60px;
+    }
+
+    .timeline-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .timeline-line {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+    }
 }
