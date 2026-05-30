@@ -22,6 +22,17 @@ body {
 }
 
 /* ── HEADER ── */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-site {
+    width: 11%;
+}
+
 .header-container {
     text-align: center;
 }
@@ -30,6 +41,9 @@ body {
     background-color: #1a2e22;
     padding: 0;
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .links-paginas {
@@ -69,7 +83,7 @@ body {
 
 /* ── HERO ── */
 .secao-inicial {
-    background-image: url('/img/imagem-cidade.jpeg');
+    background-image: url('/img/construcaobr.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
