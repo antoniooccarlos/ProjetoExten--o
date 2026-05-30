@@ -212,9 +212,9 @@ body {
 /* Linha conectora horizontal */
 .timeline-line {
     position: absolute;
-    top: 40px;
+    top: 99px;
     left: 40px;
-    right: 40px;
+    right: -62px;
     width: auto;
     height: 3px;
     background-color: var(--line-color);
@@ -335,7 +335,7 @@ body {
     }
 
     .timeline-line {
-        top: 40px;
+        top: 99px;
         left: 40px;
         right: 40px;
     }
@@ -370,7 +370,7 @@ body {
     }
 
     .timeline-line {
-        top: 30px;
+        top: 79px; /* ícone (60px) + margin-bottom (12px) + metade do nó (7px) */
         left: 30px;
         right: 30px;
     }
