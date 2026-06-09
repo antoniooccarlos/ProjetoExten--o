@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>História PF</title>
+    <title>PF Histórico</title>
     <link rel="icon" type="logo" href="/img/galo,logomini.png">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/galeria.js" defer></script>
 </head>
 
 <body>
-    
-    <!-- inicio da pagina -->
+
    <header class="header-container">
         
     <div class="logo-container">
@@ -38,13 +38,239 @@
         </ul>
     </nav>
 
-    <!--continuação do conteudo-->
-    <main class="main-container">
-        
+     <main class="main-container" id="galeria">
+ 
+        <div class="glr-hero" id="glr-carousel" data-total="4">
+ 
+            <div class="glr-trilha" id="glr-trilha">
+ 
+                <div class="glr-slide">
+                    <img src="/img/galeria/destaque1.jpg" alt="Vista aérea de Presidente Figueiredo">
+                    <div class="glr-slide-overlay"></div>
+                    <div class="glr-slide-legenda">
+                        <h2>Vista Aérea do Município</h2>
+                        <p>A exuberância da floresta amazônica vista de cima</p>
+                    </div>
+                </div>
+ 
+                <div class="glr-slide">
+                    <img src="/img/galeria/destaque2.jpg" alt="Cachoeira de Presidente Figueiredo">
+                    <div class="glr-slide-overlay"></div>
+                    <div class="glr-slide-legenda">
+                        <h2>Cachoeiras</h2>
+                        <p>Mais de 100 cachoeiras cercam a cidade, o "Terra das Cachoeiras"</p>
+                    </div>
+                </div>
+ 
+                <div class="glr-slide">
+                    <img src="/img/galeria/destaque3.jpg" alt="Usina Hidrelétrica de Balbina">
+                    <div class="glr-slide-overlay"></div>
+                    <div class="glr-slide-legenda">
+                        <h2>Lago de Balbina</h2>
+                        <p>O imenso lago formado pela hidroelétrica que gerou o município</p>
+                    </div>
+                </div>
+ 
+                <div class="glr-slide">
+                    <img src="/img/galeria/destaque4.jpg" alt="Comunidade indígena">
+                    <div class="glr-slide-overlay"></div>
+                    <div class="glr-slide-legenda">
+                        <h2>Povos Originários</h2>
+                        <p>A herança cultural dos povos Waimiri-Atroari na região</p>
+                    </div>
+                </div>
+            </div>
+ 
+            <button class="glr-btn-nav glr-btn-prev" id="glr-prev" aria-label="Anterior">&#8249;</button>
+            <button class="glr-btn-nav glr-btn-next" id="glr-next" aria-label="Próximo">&#8250;</button>
+ 
+            <div class="glr-indicadores" id="glr-indicadores"></div>
+            <div class="glr-contador" id="glr-contador">1 / 4</div>
+        </div>
+ 
+        <div class="glr-filtros-wrapper">
+            <span class="glr-filtros-label">Filtrar:</span>
+            <button class="glr-btn-filtro ativo" data-cat="todos">Todas</button>
+            <button class="glr-btn-filtro" data-cat="natureza">Natureza</button>
+            <button class="glr-btn-filtro" data-cat="historia">História</button>
+            <button class="glr-btn-filtro" data-cat="comunidade">Comunidade</button>
+            <button class="glr-btn-filtro" data-cat="infraestrutura">Infraestrutura</button>
+        </div>
+
+        <section class="glr-secao-grade">
+ 
+            <h2 class="glr-secao-titulo">
+                Acervo Fotográfico
+                <span class="glr-titulo-linha"></span>
+            </h2>
+ 
+            <div class="glr-grade" id="glr-grade">
+ 
+                <figure class="glr-card glr-destaque"
+                        data-titulo="Cachoeira da Iracema"
+                        data-sub="Natureza · Presidente Figueiredo, AM"
+                        data-categoria="natureza">
+                    <img src="/img/galeria/foto01.jpg" alt="Cachoeira da Iracema">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Natureza</span>
+                        <p class="glr-card-titulo">Cachoeira da Iracema</p>
+                        <p class="glr-card-subtitulo">Presidente Figueiredo, AM</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Construção da Rodovia BR-174"
+                        data-sub="História · Acervo histórico"
+                        data-categoria="historia">
+                    <img src="/img/galeria/foto02.jpg" alt="Construção da BR-174">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">História</span>
+                        <p class="glr-card-titulo">Construção da BR-174</p>
+                        <p class="glr-card-subtitulo">Acervo histórico</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Usina de Balbina"
+                        data-sub="Infraestrutura · Lago de Balbina"
+                        data-categoria="infraestrutura">
+                    <img src="/img/galeria/foto03.jpg" alt="Usina de Balbina">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Infraestrutura</span>
+                        <p class="glr-card-titulo">Usina de Balbina</p>
+                        <p class="glr-card-subtitulo">Lago de Balbina</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Povo Waimiri-Atroari"
+                        data-sub="Comunidade · Terra Indígena"
+                        data-categoria="comunidade">
+                    <img src="/img/galeria/foto04.jpg" alt="Povo Waimiri-Atroari">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Comunidade</span>
+                        <p class="glr-card-titulo">Povo Waimiri-Atroari</p>
+                        <p class="glr-card-subtitulo">Terra Indígena</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Fauna Amazônica"
+                        data-sub="Natureza · Floresta Nacional"
+                        data-categoria="natureza">
+                    <img src="/img/galeria/foto05.jpg" alt="Fauna Amazônica">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Natureza</span>
+                        <p class="glr-card-titulo">Fauna Amazônica</p>
+                        <p class="glr-card-subtitulo">Floresta Nacional</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Emancipação Municipal"
+                        data-sub="História · 1981"
+                        data-categoria="historia">
+                    <img src="/img/galeria/foto06.jpg" alt="Emancipação Municipal 1981">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">História</span>
+                        <p class="glr-card-titulo">Emancipação Municipal</p>
+                        <p class="glr-card-subtitulo">1981</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Centro Urbano"
+                        data-sub="Infraestrutura · Área central"
+                        data-categoria="infraestrutura">
+                    <img src="/img/galeria/foto07.jpg" alt="Centro Urbano de Presidente Figueiredo">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Infraestrutura</span>
+                        <p class="glr-card-titulo">Centro Urbano</p>
+                        <p class="glr-card-subtitulo">Área central</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Festas e Tradições"
+                        data-sub="Comunidade · Cultura local"
+                        data-categoria="comunidade">
+                    <img src="/img/galeria/foto08.jpg" alt="Festas e Tradições locais">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Comunidade</span>
+                        <p class="glr-card-titulo">Festas e Tradições</p>
+                        <p class="glr-card-subtitulo">Cultura local</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Trilhas na Floresta"
+                        data-sub="Natureza · Ecoturismo"
+                        data-categoria="natureza">
+                    <img src="/img/galeria/foto09.jpg" alt="Trilhas na Floresta Amazônica">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Natureza</span>
+                        <p class="glr-card-titulo">Trilhas na Floresta</p>
+                        <p class="glr-card-subtitulo">Ecoturismo</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Garimpo e Extração"
+                        data-sub="História · Economia primária"
+                        data-categoria="historia">
+                    <img src="/img/galeria/foto10.jpg" alt="Garimpo e atividades extrativistas">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">História</span>
+                        <p class="glr-card-titulo">Garimpo e Extração</p>
+                        <p class="glr-card-subtitulo">Economia primária</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Escola Municipal"
+                        data-sub="Comunidade · Educação"
+                        data-categoria="comunidade">
+                    <img src="/img/galeria/foto11.jpg" alt="Escola Municipal">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Comunidade</span>
+                        <p class="glr-card-titulo">Escola Municipal</p>
+                        <p class="glr-card-subtitulo">Educação</p>
+                    </figcaption>
+                </figure>
+ 
+                <figure class="glr-card"
+                        data-titulo="Rio Uatumã"
+                        data-sub="Natureza · Bacia Hidrográfica"
+                        data-categoria="natureza">
+                    <img src="/img/galeria/foto12.jpg" alt="Rio Uatumã">
+                    <figcaption class="glr-card-info">
+                        <span class="glr-card-categoria">Natureza</span>
+                        <p class="glr-card-titulo">Rio Uatumã</p>
+                        <p class="glr-card-subtitulo">Bacia Hidrográfica</p>
+                    </figcaption>
+                </figure>
+ 
+                <p class="glr-sem-resultados" id="glr-sem-resultados">
+                    Nenhuma imagem encontrada nesta categoria.
+                </p>
+ 
+            </div>
+        </section>
+
+        <div class="glr-lightbox" id="glr-lightbox" role="dialog" aria-modal="true" aria-label="Visualização de imagem">
+            <button class="glr-lightbox-fechar" id="glr-fechar" aria-label="Fechar">&times;</button>
+            <span class="glr-lightbox-contador" id="glr-lb-contador"></span>
+            <img class="glr-lightbox-imagem" id="glr-lb-img" src="" alt="">
+            <div class="glr-lightbox-rodape">
+                <strong id="glr-lb-titulo"></strong>
+                <em id="glr-lb-sub"></em>
+            </div>
+            <button class="glr-lightbox-nav glr-lightbox-nav-prev" id="glr-lb-prev" aria-label="Anterior">&#8249;</button>
+            <button class="glr-lightbox-nav glr-lightbox-nav-next" id="glr-lb-next" aria-label="Próximo">&#8250;</button>
+        </div>
+ 
     </main>
 
-    
-    <!--rodapé-->
     <footer class="footer-copyright">
         <div class="footer-conteudo">
             <p>Projeto Acadêmico História de Presidente Figueiredo.&copy; 2026 Todos os direitos reservados. <a href="/pages/bibliografia.html" target="_blank">Fontes Bibliográficas</a></p>

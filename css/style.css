@@ -21,8 +21,6 @@ body {
     background-color: var(--bg-color);
 }
 
-/* ── HEADER ── */
-
 .logo-container {
     display: flex;
     align-items: center;
@@ -76,17 +74,15 @@ body {
     color: #ffffff !important;
 }
 
-/* ── MAIN ── */
 .main-container {
     flex: 1;
 }
 
-/* ── HERO ── */
 .secao-inicial {
     background-image: url('/img/construcaobr.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     min-height: 500px;
     position: relative;
     color: #ffffff;
@@ -291,7 +287,6 @@ body {
     color: #555;
 }
 
-/* ── FOOTER ── */
 .footer-copyright {
     background-color: #1a2e22;
     color: #e0d7c6;
@@ -384,8 +379,1737 @@ body {
     }
 
     .timeline-line {
-        top: 79px; /* ícone (60px) + margin-bottom (12px) + metade do nó (7px) */
+        top: 79px;
         left: 30px;
         right: 30px;
     }
+}
+
+
+/* municipio.html Prefixo: .mun- */
+
+:root {
+    --mun-verde-escuro : #1a2e22;
+    --mun-verde-medio  : #2d4a36;
+    --mun-marrom       : #8b5a2b;
+    --mun-creme        : #e0d7c6;
+    --mun-borda        : #d4c9b0;
+    --mun-card-bg      : #ffffff;
+    --mun-grafico-barra: #384C3E;
+    --mun-bg-turismo   : url('#');
+}
+
+/* hero */
+.mun-hero {
+    background-color: var(--mun-verde-medio);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.mun-hero-overlay {
+    background-color: var(--mun-verde-medio);
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mun-hero-conteudo {
+    text-align: center;
+    max-width: 860px;
+}
+
+.mun-hero-conteudo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--mun-creme);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.mun-hero-sub {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #c9b99a;
+    letter-spacing: 1px;
+}
+
+/* seção */
+.mun-secao {
+    padding: 60px 40px;
+    background-color: var(--bg-color);
+    border-bottom: 2px solid var(--mun-borda);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Fundo alternado para seções pares */
+.mun-secao-alt {
+    background-color: #f2ede4;
+}
+
+.mun-secao-cabecalho {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 36px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--mun-borda);
+}
+
+.mun-num-secao {
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--mun-marrom);
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.mun-titulo-secao {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--mun-verde-escuro);
+}
+
+.mun-secao-corpo {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.mun-dois-col {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.mun-col-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mun-col-texto p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #3a3a3a;
+}
+
+.mun-col-midia {
+    flex: 0 0 340px;
+}
+
+.mun-bloco-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.35rem;
+    color: var(--mun-verde-escuro);
+    margin-bottom: 6px;
+}
+
+.mun-figura {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mun-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid var(--mun-borda);
+    border-radius: 3px;
+    background-color: #c8bfaf;
+}
+
+.mun-figura figcaption {
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+    text-align: center;
+}
+
+.mun-texto-centro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mun-texto-centro p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #3a3a3a;
+}
+
+/* ── GRÁFICO DE BARRAS ── */
+.mun-grafico-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.mun-grafico-legenda {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+.mun-grafico {
+    display: flex;
+    align-items: flex-end;
+    gap: 28px;
+    height: 200px;
+    padding: 0 16px;
+    border-bottom: 2px solid #aaa;
+    border-left: 2px solid #aaa;
+}
+
+.mun-barra-grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+}
+
+.mun-barra {
+    width: 52px;
+    height: var(--h);
+    background-color: var(--mun-grafico-barra);
+    border-radius: 3px 3px 0 0;
+    transition: opacity 0.3s;
+    min-height: 8px;
+}
+
+.mun-barra:hover {
+    opacity: 0.75;
+}
+
+.mun-barra-valor {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #333;
+    position: absolute;
+    bottom: calc(var(--h) + 4px);
+}
+
+.mun-barra-ano {
+    font-size: 0.78rem;
+    color: #555;
+    margin-top: 6px;
+    white-space: nowrap;
+}
+
+.mun-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.mun-card {
+    background-color: var(--mun-card-bg);
+    border: 1px solid var(--mun-borda);
+    border-top: 4px solid var(--mun-marrom);
+    border-radius: 4px;
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.mun-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+}
+
+.mun-card-icone {
+    font-size: 2rem;
+}
+
+.mun-card-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--mun-verde-escuro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.mun-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.mun-banner-foto {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.mun-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Placeholder enquanto a imagem real não é inserida */
+    background-color: #5a7a5e;
+    display: block;
+}
+
+.mun-banner-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px 36px;
+    background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0) 100%);
+    color: #ffffff;
+}
+
+.mun-banner-overlay h3 {
+    font-family: 'Georgia', serif;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.mun-banner-overlay p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    max-width: 680px;
+    color: #e8e0d4;
+}
+
+/* ── RESPONSIVIDADE – página município ── */
+@media (max-width: 900px) {
+    .mun-dois-col {
+        flex-direction: column;
+    }
+
+    .mun-col-midia {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .mun-secao {
+        padding: 40px 20px;
+    }
+
+    .mun-hero-conteudo h1 {
+        font-size: 1.7rem;
+    }
+
+    .mun-grafico {
+        gap: 16px;
+    }
+
+    .mun-barra {
+        width: 38px;
+    }
+
+    .mun-banner-foto {
+        height: 280px;
+    }
+
+    .mun-banner-overlay h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mun-cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mun-num-secao {
+        font-size: 1.8rem;
+    }
+
+    .mun-grafico {
+        gap: 10px;
+    }
+
+    .mun-barra {
+        width: 28px;
+    }
+}
+
+
+/* abertura_projetos.html Prefixo: .ap-*/
+
+:root {
+    --ap-verde-escuro  : #1a2e22;
+    --ap-verde-medio   : #2d4a36;
+    --ap-marrom        : #8b5a2b;
+    --ap-creme         : #e0d7c6;
+    --ap-creme-claro   : #c9b99a;
+    --ap-borda         : #d4c9b0;
+    --ap-card-bg       : #ffffff;
+    --ap-texto         : #3a3a3a;
+}
+
+/* Hero */
+
+.ap-hero {
+    background-color: var(--ap-verde-medio);
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.ap-hero-conteudo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--ap-creme);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ap-hero-sub {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ap-creme-claro);
+    letter-spacing: 1px;
+}
+
+/* seção genérica */
+.ap-secao {
+    padding: 60px 40px;
+    border-bottom: 2px solid var(--ap-borda);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* seção 1 - intro */
+.ap-intro {
+    display: flex;
+    justify-content: center;
+}
+
+.ap-intro-texto {
+    max-width: 800px;
+    text-align: left;
+}
+
+.ap-intro-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ap-texto);
+}
+
+/* seção 2 - três pilares */
+.ap-pilares-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ap-verde-escuro);
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+/* Grid de 3 cards iguais */
+.ap-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* card individual */
+.ap-card {
+    background-color: var(--ap-card-bg);
+    border: 1px solid var(--ap-borda);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.ap-card:hover {
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+/* cabeçalho do card (ícone + títulos) */
+.ap-card-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--ap-borda);
+}
+
+.ap-card-icone {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.ap-card-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: var(--ap-marrom);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 2px;
+}
+
+.ap-card-subtitulo {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Placeholder/container da foto */
+.ap-card-foto-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #c8bfaf;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Imagem real do card – quando src for preenchido */
+.ap-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Oculta broken-image quando src="#" */
+    color: transparent;
+}
+
+/* Lista de informações */
+.ap-card-lista {
+    list-style: disc;
+    padding: 18px 20px 22px 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.ap-card-lista li {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--ap-texto);
+}
+
+.ap-card-lista li strong {
+    color: var(--ap-verde-escuro);
+}
+
+/* seção 3 - impacto no territorio */
+.ap-territorio-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+/* Coluna do mapa */
+.ap-territorio-mapa {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ap-mapa-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 3px solid var(--ap-borda);
+    border-radius: 3px;
+    background-color: #9cb8a0;
+    color: transparent;
+    display: block;
+}
+
+.ap-mapa-legenda {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+}
+
+/* Coluna do texto */
+.ap-territorio-texto {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+}
+
+.ap-territorio-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.7rem;
+    color: var(--ap-verde-escuro);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.ap-territorio-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ap-texto);
+    font-weight: 600;
+}
+
+/* RESPONSIVIDADE – página Abertura & Projetos */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .ap-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ap-hero-conteudo h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile grande */
+@media (max-width: 768px) {
+    .ap-secao {
+        padding: 40px 20px;
+    }
+
+    .ap-cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ap-territorio-flex {
+        flex-direction: column;
+    }
+
+    .ap-territorio-mapa {
+        flex: unset;
+        width: 100%;
+    }
+
+    .ap-mapa-img {
+        height: 240px;
+    }
+
+    .ap-hero-conteudo h1 {
+        font-size: 1.5rem;
+    }
+
+    .ap-territorio-titulo {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .ap-hero-conteudo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .ap-hero-sub {
+        font-size: 0.9rem;
+    }
+
+    .ap-card-foto-placeholder {
+        height: 160px;
+    }
+}
+
+/* origens.html Prefixo: .ori-*/
+
+:root {
+    --ori-verde-escuro  : #1a2e22;
+    --ori-verde-medio   : #2d4a36;
+    --ori-marrom        : #8b5a2b;
+    --ori-creme         : #e0d7c6;
+    --ori-creme-claro   : #c9b99a;
+    --ori-borda         : #d4c9b0;
+    --ori-card-bg       : #ffffff;
+    --ori-texto         : #3a3a3a;
+}
+
+/* Hero */
+.ori-hero {
+    background-color: var(--ori-verde-medio);
+    background-size: cover;
+    background-position: center;
+    padding: 52px 24px;
+    text-align: center;
+}
+
+.ori-hero-conteudo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--ori-creme);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ori-hero-sub {
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ori-creme-claro);
+    letter-spacing: 0.5px;
+}
+
+/* seção generica */
+.ori-secao {
+    padding: 60px 40px;
+    border-bottom: 2px solid var(--ori-borda);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* seção 1 */
+.ori-sec1-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+/* Coluna da imagem */
+.ori-sec1-imagem {
+    flex: 0 0 42%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ori-img-historica {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border: 3px solid var(--ori-borda);
+    border-radius: 3px;
+    display: block;
+    background-color: #8a9e8a;
+    color: transparent;
+    filter: sepia(35%);
+}
+
+.ori-img-legenda {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+}
+
+/* Coluna do texto */
+.ori-sec1-texto {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+}
+
+.ori-sec1-icone-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--ori-verde-escuro);
+    margin-bottom: 4px;
+}
+
+.ori-sec1-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ori-texto);
+}
+
+/* seção 2 */
+.ori-sec2-citacao {
+    background-color: var(--ori-verde-escuro);
+    max-width: 100%;
+    padding: 64px 40px;
+    border-bottom: none;
+    border-top: 2px solid var(--ori-borda);
+    border-bottom: 2px solid var(--ori-borda);
+}
+
+.ori-citacao-bloco {
+    max-width: 860px;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+    text-align: center;
+}
+
+.ori-citacao-bloco p {
+    font-family: 'Georgia', serif;
+    font-size: 1.55rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--ori-creme);
+}
+
+.ori-citacao-fonte {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: var(--ori-creme-claro);
+}
+
+/* seção 3 */
+.ori-sec3-feature {
+    position: relative;
+    padding: 0;
+    border-bottom: none;
+    max-width: 100%;
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.ori-sec3-img-fundo {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    background-color: #6e7d5e;
+    color: transparent;
+}
+
+.ori-sec3-cartao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(250, 248, 242, 0.93);
+    border: 2px solid var(--ori-borda);
+    border-radius: 4px;
+    padding: 32px 36px;
+    max-width: 620px;
+    width: 90%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ori-sec3-icone-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--ori-verde-escuro);
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.ori-sec3-cartao p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ori-texto);
+}
+
+/* seção 4 */
+.ori-sec4-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    border-bottom: none;
+}
+
+.ori-sec4-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ori-verde-escuro);
+    text-align: center;
+}
+
+.ori-impactos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    width: 100%;
+}
+
+.ori-impacto-card {
+    background-color: var(--ori-card-bg);
+    border: 1px solid var(--ori-borda);
+    border-radius: 4px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.ori-impacto-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.09);
+    transform: translateY(-4px);
+}
+
+.ori-impacto-icone-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--ori-marrom);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ori-impacto-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--ori-texto);
+}
+
+/* Botão de navegação para a próxima página */
+.ori-sec4-botao-container {
+    text-align: center;
+}
+
+.ori-botao-proximo {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--ori-marrom);
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.ori-botao-proximo:hover {
+    background-color: var(--ori-verde-escuro);
+    transform: scale(1.04);
+}
+
+/* ══════════════════════════════
+   RESPONSIVIDADE – página origens
+══════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .ori-hero-conteudo h1 {
+        font-size: 1.8rem;
+    }
+
+    .ori-sec3-img-fundo {
+        height: 480px;
+    }
+}
+
+/* Mobile grande */
+@media (max-width: 768px) {
+    .ori-secao {
+        padding: 40px 20px;
+    }
+
+    /* Seção 1: empilha verticalmente */
+    .ori-sec1-flex {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .ori-sec1-imagem {
+        flex: unset;
+        width: 100%;
+    }
+
+    .ori-img-historica {
+        height: 240px;
+    }
+
+    /* Seção 2 */
+    .ori-sec2-citacao {
+        padding: 48px 24px;
+    }
+
+    .ori-citacao-bloco p {
+        font-size: 1.2rem;
+    }
+
+    /* Seção 3 */
+    .ori-sec3-feature {
+        min-height: 500px;
+    }
+
+    .ori-sec3-img-fundo {
+        height: 500px;
+    }
+
+    .ori-sec3-cartao {
+        padding: 24px 20px;
+    }
+
+    /* Seção 4: 2 colunas */
+    .ori-impactos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ori-hero-conteudo h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    .ori-hero-conteudo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .ori-hero-sub {
+        font-size: 0.9rem;
+    }
+
+    /* Seção 4: 1 coluna */
+    .ori-impactos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ori-citacao-bloco p {
+        font-size: 1rem;
+    }
+
+    .ori-sec3-cartao {
+        padding: 20px 16px;
+    }
+}
+
+/* bibliografia.html  |  Prefixo: .bib- Normas ABNT NBR 6023:2018 */
+ 
+:root {
+    --bib-verde-escuro : #1a2e22;
+    --bib-verde-medio  : #2d4a36;
+    --bib-marrom       : #8b5a2b;
+    --bib-creme        : #e0d7c6;
+    --bib-creme-claro  : #c9b99a;
+    --bib-borda        : #d4c9b0;
+    --bib-bg           : #FAF8F2;
+    --bib-texto        : #2a2a2a;
+    --bib-placeholder  : #b08060;
+}
+ 
+/* ── Hero ── */
+.bib-hero {
+    background-color: var(--bib-verde-escuro);
+    padding: 52px 24px;
+    text-align: center;
+    border-bottom: 3px solid var(--bib-marrom);
+}
+ 
+.bib-hero-conteudo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--bib-creme);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.bib-hero-sub {
+    font-size: 0.95rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--bib-creme-claro);
+    letter-spacing: 0.4px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+ 
+/* ── Seção principal ── */
+.bib-secao {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 40px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+.bib-secao-titulo {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--bib-verde-escuro);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bib-borda);
+}
+ 
+.bib-secao-descricao {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+ 
+/* ── Lista de referências (ABNT: sem marcador, numerada internamente via CSS) ── */
+.bib-lista {
+    list-style: none;
+    counter-reset: bib-counter;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+ 
+/* ── Item individual ── */
+.bib-item {
+    counter-increment: bib-counter;
+    position: relative;
+    padding: 20px 20px 20px 52px;
+    border-bottom: 1px solid var(--bib-borda);
+    transition: background-color 0.2s;
+}
+ 
+.bib-item:first-of-type {
+    border-top: 1px solid var(--bib-borda);
+}
+ 
+.bib-item:hover {
+    background-color: #f3efe6;
+}
+ 
+/* Numerador lateral discreto */
+.bib-item::before {
+    content: counter(bib-counter);
+    position: absolute;
+    left: 16px;
+    top: 22px;
+    font-family: 'Georgia', serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--bib-creme-claro);
+    min-width: 20px;
+    text-align: right;
+    user-select: none;
+}
+ 
+/* ── Texto da referência (formatação ABNT) ── */
+.bib-referencia {
+    /*
+      NBR 6023:2018:
+      - Fonte: tamanho 12 no documento impresso → usamos ~1rem (16px)
+      - Espaçamento entre linhas: simples (1.5 no máximo)
+      - Alinhamento: justificado
+      - Recuo de 0.5cm na segunda linha em diante (hanging indent)
+    */
+    display: block;
+    font-family: 'Georgia', serif;
+    font-size: 0.97rem;
+    line-height: 1.75;
+    color: var(--bib-texto);
+    text-align: justify;
+    text-indent: 0;
+ 
+    /* Hanging indent: segunda linha recuada (padrão ABNT para lista de refs) */
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+}
+ 
+/* Título em negrito dentro da referência (já aplicado via <strong> no HTML) */
+.bib-referencia strong {
+    font-weight: bold;
+}
+ 
+/* Links dentro das referências */
+.bib-link {
+    color: var(--bib-marrom);
+    word-break: break-all;
+    text-decoration: underline;
+    font-style: normal;
+    transition: color 0.2s;
+}
+ 
+.bib-link:hover {
+    color: var(--bib-verde-escuro);
+}
+ 
+/* ── Nota de rodapé da seção ── */
+.bib-nota-secao {
+    max-width: 900px;
+    margin: 0 auto 48px;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+ 
+.bib-nota-texto {
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: #888;
+    font-style: italic;
+    border-left: 3px solid var(--bib-borda);
+    padding-left: 14px;
+}
+ 
+.bib-nota-texto strong {
+    color: #666;
+    font-style: normal;
+}
+ 
+/* ══════════════════════════════
+   RESPONSIVIDADE – página bibliografia
+══════════════════════════════ */
+ 
+@media (max-width: 768px) {
+    .bib-hero-conteudo h1 {
+        font-size: 1.5rem;
+    }
+ 
+    .bib-hero-sub {
+        font-size: 0.88rem;
+    }
+ 
+    .bib-secao {
+        padding: 40px 20px 32px;
+    }
+ 
+    .bib-nota-secao {
+        padding: 0 20px;
+    }
+ 
+    .bib-item {
+        padding: 18px 14px 18px 44px;
+    }
+ 
+    .bib-referencia {
+        font-size: 0.93rem;
+    }
+}
+ 
+@media (max-width: 480px) {
+    .bib-hero-conteudo h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.5px;
+    }
+ 
+    .bib-secao-titulo {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+    }
+ 
+    .bib-item {
+        padding-left: 36px;
+    }
+ 
+    .bib-item::before {
+        left: 10px;
+    }
+ 
+    .bib-referencia {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+}
+
+:root {
+        --glr-verde-escuro : #1a2e22;
+        --glr-verde-medio  : #2d4a36;
+        --glr-marrom       : #8b5a2b;
+        --glr-creme        : #e0d7c6;
+        --glr-creme-claro  : #c9b99a;
+        --glr-borda        : #d4c9b0;
+        --glr-bg           : #FAF8F2;
+        --glr-texto        : #2a2a2a;
+        --glr-sombra       : rgba(26,46,34,.18);
+}
+ 
+    /* ── Hero / Carousel ── */
+    .glr-hero {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+        background: var(--glr-verde-escuro);
+    }
+ 
+    /* ── Slides ──
+       Para adicionar/remover slides:
+         1. Copie ou apague um <div class="glr-slide"> dentro de .glr-trilha
+         2. Atualize o atributo data-total no <div class="glr-carousel">
+         3. O JS cuida do resto automaticamente
+    */
+    .glr-trilha {
+        display: flex;
+        height: 100%;
+        transition: transform .55s cubic-bezier(.4,0,.2,1);
+        will-change: transform;
+    }
+ 
+    .glr-slide {
+        min-width: 100%;
+        height: 100%;
+        position: relative;
+        flex-shrink: 0;
+    }
+ 
+    .glr-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+ 
+    .glr-slide-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(26,46,34,.85) 0%,
+            rgba(26,46,34,.3) 45%,
+            transparent 100%
+        );
+    }
+ 
+    .glr-slide-legenda {
+        position: absolute;
+        bottom: 72px;
+        left: 52px;
+        right: 52px;
+        color: #fff;
+    }
+ 
+    .glr-slide-legenda h2 {
+        font-family: 'Georgia', serif;
+        font-size: 2rem;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        text-shadow: 0 2px 8px rgba(0,0,0,.4);
+    }
+ 
+    .glr-slide-legenda p {
+        font-size: .95rem;
+        color: var(--glr-creme);
+        font-style: italic;
+        text-shadow: 0 1px 4px rgba(0,0,0,.5);
+    }
+ 
+    /* Botões prev/next */
+    .glr-btn-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(26,46,34,.55);
+        border: 2px solid rgba(224,215,198,.35);
+        color: #fff;
+        font-size: 1.5rem;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .2s, border-color .2s;
+        z-index: 10;
+        user-select: none;
+    }
+ 
+    .glr-btn-nav:hover {
+        background: var(--glr-marrom);
+        border-color: var(--glr-creme);
+    }
+ 
+    .glr-btn-prev { left: 20px; }
+    .glr-btn-next { right: 20px; }
+ 
+    /* Indicadores (bolinhas) */
+    .glr-indicadores {
+        position: absolute;
+        bottom: 28px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+ 
+    .glr-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.4);
+        border: 1px solid rgba(255,255,255,.6);
+        cursor: pointer;
+        transition: background .2s, transform .2s;
+    }
+ 
+    .glr-dot.ativo {
+        background: var(--glr-creme);
+        transform: scale(1.25);
+    }
+ 
+    /* Contador no canto */
+    .glr-contador {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: .78rem;
+        letter-spacing: 2px;
+        color: rgba(255,255,255,.65);
+        font-family: 'Georgia', serif;
+        z-index: 10;
+    }
+ 
+    /* ── Seção de filtros ── */
+    .glr-filtros-wrapper {
+        background: var(--glr-verde-escuro);
+        padding: 18px 40px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        border-bottom: 3px solid var(--glr-marrom);
+    }
+ 
+    .glr-filtros-label {
+        font-size: .75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--glr-creme-claro);
+        margin-right: 4px;
+        font-family: 'Georgia', serif;
+    }
+ 
+    .glr-btn-filtro {
+        padding: 7px 18px;
+        border-radius: 2px;
+        border: 1px solid rgba(224,215,198,.3);
+        background: transparent;
+        color: var(--glr-creme);
+        font-size: .8rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background .2s, border-color .2s, color .2s;
+    }
+ 
+    .glr-btn-filtro:hover,
+    .glr-btn-filtro.ativo {
+        background: var(--glr-marrom);
+        border-color: var(--glr-marrom);
+        color: #fff;
+    }
+ 
+    /* ── Grade de imagens ── */
+    .glr-secao-grade {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 48px 32px 64px;
+    }
+ 
+    .glr-secao-titulo {
+        font-family: 'Georgia', serif;
+        font-size: 1.05rem;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--glr-verde-escuro);
+        margin-bottom: 28px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid var(--glr-borda);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+ 
+    .glr-secao-titulo span.glr-titulo-linha {
+        flex: 1;
+        height: 2px;
+        background: var(--glr-borda);
+        display: inline-block;
+    }
+ 
+    /*
+      GRADE MASONRY-LIKE:
+      Para adicionar imagens: copie um <figure class="glr-card"> e cole dentro de .glr-grade
+      Para fazer uma imagem ocupar 2 colunas: adicione a classe  glr-destaque  à <figure>
+    */
+    .glr-grade {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+ 
+    .glr-card {
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        cursor: pointer;
+        margin: 0;
+        background: var(--glr-verde-escuro);
+        aspect-ratio: 4 / 3;
+    }
+ 
+    /* Cartão destaque: 2 colunas + 2 linhas */
+    .glr-card.glr-destaque {
+        grid-column: span 2;
+        grid-row: span 2;
+        aspect-ratio: unset;
+    }
+ 
+    .glr-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .45s cubic-bezier(.4,0,.2,1), filter .35s;
+        filter: brightness(.92);
+    }
+ 
+    .glr-card:hover img {
+        transform: scale(1.06);
+        filter: brightness(1);
+    }
+ 
+    .glr-card-info {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(26,46,34,.82) 0%, transparent 55%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 14px 16px;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+ 
+    .glr-card:hover .glr-card-info {
+        opacity: 1;
+    }
+ 
+    .glr-card-titulo {
+        font-family: 'Georgia', serif;
+        font-size: .9rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: .5px;
+        margin-bottom: 3px;
+    }
+ 
+    .glr-card-subtitulo {
+        font-size: .75rem;
+        color: var(--glr-creme);
+        font-style: italic;
+    }
+ 
+    .glr-card-categoria {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(26,46,34,.75);
+        color: var(--glr-creme);
+        font-size: .65rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 3px 9px;
+        border-radius: 2px;
+        border-left: 2px solid var(--glr-marrom);
+    }
+ 
+    /* ── Lightbox ── */
+    .glr-lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(10,20,14,.93);
+        z-index: 9999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        backdrop-filter: blur(4px);
+    }
+ 
+    .glr-lightbox.aberto {
+        display: flex;
+        animation: glr-fade-in .25s ease;
+    }
+ 
+    @keyframes glr-fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+ 
+    .glr-lightbox-imagem {
+        max-width: 88vw;
+        max-height: 76vh;
+        border-radius: 3px;
+        box-shadow: 0 24px 72px rgba(0,0,0,.7);
+        object-fit: contain;
+        display: block;
+    }
+ 
+    .glr-lightbox-rodape {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--glr-creme);
+    }
+ 
+    .glr-lightbox-rodape strong {
+        font-family: 'Georgia', serif;
+        font-size: 1rem;
+        letter-spacing: .5px;
+        display: block;
+        margin-bottom: 4px;
+    }
+ 
+    .glr-lightbox-rodape em {
+        font-size: .85rem;
+        color: var(--glr-creme-claro);
+    }
+ 
+    .glr-lightbox-fechar {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        background: none;
+        border: 1px solid rgba(255,255,255,.3);
+        color: #fff;
+        font-size: 1.4rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .2s;
+        line-height: 1;
+    }
+ 
+    .glr-lightbox-fechar:hover {
+        background: var(--glr-marrom);
+        border-color: var(--glr-marrom);
+    }
+ 
+    .glr-lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(26,46,34,.6);
+        border: 1px solid rgba(255,255,255,.2);
+        color: #fff;
+        font-size: 1.6rem;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background .2s;
+    }
+ 
+    .glr-lightbox-nav:hover { background: var(--glr-marrom); }
+    .glr-lightbox-nav-prev { left: 20px; }
+    .glr-lightbox-nav-next { right: 20px; }
+ 
+    .glr-lightbox-contador {
+        position: absolute;
+        top: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: .78rem;
+        letter-spacing: 2px;
+        color: rgba(255,255,255,.55);
+        font-family: 'Georgia', serif;
+    }
+ 
+    /* ── Mensagem sem resultados ── */
+    .glr-sem-resultados {
+        display: none;
+        text-align: center;
+        padding: 60px 20px;
+        color: #888;
+        font-style: italic;
+        font-family: 'Georgia', serif;
+        font-size: 1rem;
+        grid-column: 1 / -1;
+    }
+ 
+    /* ══ Responsividade ══ */
+    @media (max-width: 1024px) {
+        .glr-grade { grid-template-columns: repeat(3, 1fr); }
+    }
+ 
+    @media (max-width: 768px) {
+        .glr-hero { height: 380px; }
+        .glr-slide-legenda { left: 24px; right: 24px; bottom: 56px; }
+        .glr-slide-legenda h2 { font-size: 1.4rem; }
+        .glr-grade { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .glr-card.glr-destaque { grid-column: span 2; grid-row: span 1; }
+        .glr-secao-grade { padding: 32px 16px 48px; }
+        .glr-filtros-wrapper { padding: 14px 16px; }
+        .glr-lightbox-nav { display: none; }
+    }
+ 
+    @media (max-width: 480px) {
+        .glr-hero { height: 280px; }
+        .glr-grade { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+        .glr-card.glr-destaque { grid-column: 1 / -1; }
+        .glr-slide-legenda h2 { font-size: 1.1rem; }
+        .glr-lightbox-imagem { max-width: 96vw; max-height: 70vh; }
+        .glr-btn-filtro { font-size: .7rem; padding: 6px 12px; }
+    }
+
+.meme {
+    width: 40%;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    max-width: 100%;
 }
